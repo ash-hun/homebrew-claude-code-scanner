@@ -1,12 +1,12 @@
 cask "claude-code-scanner" do
-  version "0.1.3,0.1.2"
+  version "0.1.3"
 
   if Hardware::CPU.arm?
-    url "https://github.com/ash-hun/claude-code-scanner/releases/download/v#{version.csv.first}/Claude-Code-Scanner-#{version.csv.second}-arm64.dmg"
-    sha256 "2029b60bf3c5561b4ea5ab5ffff5e5d0c968987b7c166049ebe8ca8821855913"
+    url "https://github.com/ash-hun/claude-code-scanner/releases/download/v#{version}/Claude-Code-Scanner-#{version}-arm64.dmg"
+    sha256 "15af9b5790a1d73c5abe2a45f5588f32dfd23ca14582b26ec0611287e204986f"
   else
-    url "https://github.com/ash-hun/claude-code-scanner/releases/download/v#{version.csv.first}/Claude-Code-Scanner-#{version.csv.second}-x64.dmg"
-    sha256 "9eafd2ee627f65e9139dafed91dd6f15e030bb59d70ff214f80d19aeff38ae1a"
+    url "https://github.com/ash-hun/claude-code-scanner/releases/download/v#{version}/Claude-Code-Scanner-#{version}-x64.dmg"
+    sha256 "2e524b5f811b2af0579d40fc8a8cd74b822b451ed85a0c5a1ba73f5b0d16e4ec"
   end
 
   name "Claude Code Scanner"
