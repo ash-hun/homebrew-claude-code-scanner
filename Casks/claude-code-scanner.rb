@@ -13,9 +13,13 @@ cask "claude-code-scanner" do
   desc "Claude Code API Traffic Scanner & Analyzer"
   homepage "https://github.com/ash-hun/claude-code-scanner"
 
-  depends_on cask: "docker"
-
   app "Claude Code Scanner.app"
+
+  caveats <<~EOS
+    Docker Desktop is required for database features.
+    Install it from https://www.docker.com/products/docker-desktop/ or:
+      brew install --cask docker
+  EOS
 
   zap trash: [
     "~/Library/Application Support/claude-code-scanner",
